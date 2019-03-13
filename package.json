@@ -1,0 +1,19 @@
+{
+  "name": "courseworkui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DimoHG/CourseWorkUI.git"
+  },
+  "author": "Dimo Georgiev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DimoHG/CourseWorkUI/issues"
+  },
+  "homepage": "https://github.com/DimoHG/CourseWorkUI#readme"
+}
