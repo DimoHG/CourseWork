@@ -10,12 +10,20 @@ class TagInput extends Component {
         super(props);
         this.state = {
             inputValue: 'Enter your search criteria...',
-            tagArray: ['JS', 'HTML']
+            tagArray: []
         };
     }
 
-    onSimpleInputChange = (text) => {
-        this.setState({inputValue: text});
+    onSimpleInputChange = (input) => {
+        let lastTypeCharacter = input.charAt(input.length - 1);
+        let asciiOfLastCharacter = lastTypeCharacter.charCodeAt(0);
+        if (asciiOfLastCharacter === 32) {
+            const newTagValue = input.substring(0, input.length-1);
+            this.state.tagArray.push(newTagValue);
+            this.setState({inputValue: ''});
+        } else {
+            this.setState({ inputValue: '' });
+        }
     }
 
     render() {
