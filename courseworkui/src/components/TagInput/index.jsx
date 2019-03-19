@@ -19,10 +19,16 @@ class TagInput extends Component {
         let lastTypedCharacter = inputText.charAt(inputText.length - 1);
         let asciiOfLastCharacter = lastTypedCharacter.charCodeAt(0);
         if (asciiOfLastCharacter === SpaceBarASCIICode) {
-            
+            let tagArrayCopy = this.state.tagArray;
             const newTagValue = inputText.trim();
-            this.state.tagArray.push(newTagValue);
+
             this.setState({ inputValue: '' });
+
+            if (tagArrayCopy.indexOf(newTagValue) > -1) {
+                return;
+            } else {
+                this.state.tagArray.push(newTagValue);
+            }
         } else {
             this.setState({ inputValue: inputText.trim() })
         }
