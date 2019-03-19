@@ -15,7 +15,7 @@ class TagInput extends Component {
     }
 
     onSimpleInputChange = (text) => {
-        this.state.inputValue = text;
+        this.setState({inputValue: text});
     }
 
     render() {
