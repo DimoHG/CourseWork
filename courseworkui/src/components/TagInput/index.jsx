@@ -4,6 +4,7 @@ import styles from './styles.css';
 import TagContainer from '../TagContainer';
 import SimpleInput from '../SimpleInput';
 
+const SpaceBarASCIICode = 32;
 
 class TagInput extends Component {
     constructor(props) {
@@ -17,7 +18,7 @@ class TagInput extends Component {
     onSimpleInputChange = (inputText) => {
         let lastTypedCharacter = inputText.charAt(inputText.length - 1);
         let asciiOfLastCharacter = lastTypedCharacter.charCodeAt(0);
-        if (asciiOfLastCharacter === 32) {
+        if (asciiOfLastCharacter === SpaceBarASCIICode) {
             
             const newTagValue = inputText.trim();
             this.state.tagArray.push(newTagValue);
