@@ -15,7 +15,7 @@
 }
 
 .tag .close::after {
-    content: 'x';
+    content: "\00d7";
     font-weight: bold;
     display: inline-block;
     transform: scale(1.4);
