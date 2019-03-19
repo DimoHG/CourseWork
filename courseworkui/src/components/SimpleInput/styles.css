@@ -1,0 +1,9 @@
+.main-input{
+    margin-left: 0.5em;
+    border: 0;
+    background: transparent;
+    color: white;
+    font-size: 100%;
+    outline: 0;
+    padding: 0.5em 0.1em;
+}
