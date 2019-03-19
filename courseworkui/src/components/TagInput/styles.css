@@ -1,0 +1,17 @@
+.tags-input {
+    border: 1px solid #333;
+    display: inline-block;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 40px;
+}
+
+.pop-infront{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+
