@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import particlesConfig from './particles-config.json';
 import Logo from '../Banner/Logo-TU-blue-3D.png'
-import SearchInput from '../SearchInput'
+import TagInput from '../TagInput'
 
 //eslint-disable-next-line
 import styles from './styles.css';
@@ -18,7 +18,7 @@ class Banner extends Component {
             <div>
                 <div id="particles-js" />
                 <img src={Logo} className="tu-logo" alt="logo" />
-                <SearchInput />
+                <TagInput />
             </div>
         );
     };
