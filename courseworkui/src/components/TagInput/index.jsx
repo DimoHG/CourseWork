@@ -14,15 +14,16 @@ class TagInput extends Component {
         };
     }
 
-    onSimpleInputChange = (input) => {
-        let lastTypeCharacter = input.charAt(input.length - 1);
-        let asciiOfLastCharacter = lastTypeCharacter.charCodeAt(0);
+    onSimpleInputChange = (inputText) => {
+        let lastTypedCharacter = inputText.charAt(inputText.length - 1);
+        let asciiOfLastCharacter = lastTypedCharacter.charCodeAt(0);
         if (asciiOfLastCharacter === 32) {
-            const newTagValue = input.substring(0, input.length - 1);
+            
+            const newTagValue = inputText.trim();
             this.state.tagArray.push(newTagValue);
-            this.setState({ inputValue: ' ' });
+            this.setState({ inputValue: '' });
         } else {
-            this.setState({ inputValue: input.trim() })
+            this.setState({ inputValue: inputText.trim() })
         }
     }
 
