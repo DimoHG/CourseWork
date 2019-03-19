@@ -22,15 +22,22 @@ class TagInput extends Component {
             this.state.tagArray.push(newTagValue);
             this.setState({ inputValue: ' ' });
         } else {
-            this.setState({ inputValue: input })
+            this.setState({ inputValue: input.trim() })
         }
+    }
+
+    onRemoveTag = (tagValue) => {
+        let tagArrayCopy = this.state.tagArray.filter(e => e !== tagValue);
+        this.setState({
+            tagArray: tagArrayCopy
+        })
     }
 
     render() {
         return (
             <div className="pop-infront">
                 <div className="tags-input" data-name="tags-input">
-                    <TagContainer tagArray={this.state.tagArray} />
+                    <TagContainer tagArray={this.state.tagArray} onRemoveTag={this.onRemoveTag} />
                     <SimpleInput inputValue={this.state.inputValue} onSimpleInputChange={this.onSimpleInputChange} />
                 </div>
             </div>
